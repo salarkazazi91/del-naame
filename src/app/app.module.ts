@@ -1,3 +1,5 @@
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,6 +20,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     NavigationComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     // NgPersianDatepickerModule,
