@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
-import { NgPersianDatepickerModule } from 'ng-persian-datepicker';
-import { ReactiveFormsModule } from '@angular/forms';
+// import { NgPersianDatepickerModule } from 'ng-persian-datepicker';
+// import { ReactiveFormsModule } from '@angular/forms';
+
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgPersianDatepickerModule,
-    ReactiveFormsModule,
+    // NgPersianDatepickerModule,
+    // ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

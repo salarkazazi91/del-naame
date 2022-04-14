@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+// import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,5 @@ import { FormControl } from '@angular/forms';
 export class AppComponent {
   title = 'del-naame';
 
-  dateValue = new FormControl();
+  // dateValue = new FormControl();
 }
