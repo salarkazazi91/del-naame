@@ -2,7 +2,6 @@
 @import "./var";
 @import "./fonts.scss";
 
-
 // FONTS
 // BMedad,BZiba,FarNazanin,iranNastaliq,mj_Smooth;
 // END FONTS
@@ -14,8 +13,11 @@ body {
     font-family: BZiba, FarNazanin, Arial, Helvetica, sans-serif;
 }
 
+li {
+    list-style: none;
+}
 
-a{
-    font-size:clamp(1.5rem, 5vw, 3rem) !important;
-
+a {
+    font-size: clamp(1.5rem, 5vw, 3rem) !important;
+    text-decoration: none;
 }

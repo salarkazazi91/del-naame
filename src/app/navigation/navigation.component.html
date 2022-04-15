@@ -1,22 +1,12 @@
-<div class="menu"  [ngClass]="{'toggle-menu':toggleMenu}">
-  <button class="navbar-toggler m-2 cstm-navbar-toggler border-light" type="button" data-bs-toggle="collapse"
-    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-    aria-label="Toggle navigation"
-    (click)="toggleMenu=!toggleMenu"
-    >
-    <div class="demo">
-      <div class="menu-icon">
-        <input class="menu-icon__cheeckbox" type="checkbox" />
-        <div>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </button>
-  <ul class="menu-items">
-    <li class="menu-item">خانه</li>
-    <li class="menu-item">روزنامه دیواری</li>
-    <li class="menu-item">دل نامه ها</li>
+<div class="menu-btn" [ngClass]="{'opened-menu':toggleMenu}" (click)="toggleMenu=!toggleMenu">
+  <span class="line" [ngClass]="{'bg-dark':toggleMenu}"></span>
+  <span class="line" [ngClass]="{'bg-dark':toggleMenu}"></span>
+</div>
+<div class="menu" [ngClass]="{'toggle-menu':toggleMenu}">
+
+  <ul class="h-100 mt-5 menu-items dir-rtl">
+    <li class="menu-item"><a class="text-dark" href="">خانه</a></li>
+    <li class="menu-item"><a class="text-dark" href="">روزنامه دیواری</a></li>
+    <li class="menu-item"><a class="text-dark" href="">دل نامه ها</a></li>
   </ul>
 </div>
