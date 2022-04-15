@@ -1,4 +1,41 @@
-:host{
-    height:200vh;
+:host {
     display: block;
+    height: 100vh;
+    .main {
+        height: 100%;
+        display: grid;
+        
+        grid-template-rows: repeat(4,minmax(40px,auto));
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-template-areas:
+            "title pic2 logo"
+            "title pic2 logo"
+            "pic1 pic2 header"
+            "pic1 pic2 content"
+            "pic1 pic2 content";
+    }
+}
+
+.title {
+    grid-area: title;
+}
+.pic1 {
+    grid-area: pic1;
+}
+.pic2 {
+    grid-area: pic2;
+}
+.logo {
+    grid-area: logo;
+}
+.header {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+}
+
+div {
+    border: 1px solid yellow;
 }
