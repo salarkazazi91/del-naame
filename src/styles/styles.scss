@@ -1,6 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
- @import './var';
+@import "./var";
+@import "./fonts.scss";
 
- body{
-     background-color: $clr-background;
- }
+
+// FONTS
+// BMedad,BZiba,FarNazanin,iranNastaliq,mj_Smooth;
+// END FONTS
+
+// STYLE
+body {
+    background-color: $clr-background;
+
+    font-family: BZiba, FarNazanin, Arial, Helvetica, sans-serif;
+}
+
+
+a{
+    font-size:clamp(1.5rem, 5vw, 3rem) !important;
+
+}

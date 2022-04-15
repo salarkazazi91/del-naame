@@ -5,6 +5,7 @@
     padding: .5rem;
 }
 
+//--------------------------------- TOGGLER  
 
 .demo {
 	display: flex;
@@ -99,3 +100,19 @@
 		}
 	}
 }
+//--------------------------------- TOGGLER END 
+
+////------------------------------- placeholder
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $clr-menu-search-placeholder;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $clr-menu-search-placeholder;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $clr-menu-search-placeholder;
+  }
+////-------------------------------   placeholder end
