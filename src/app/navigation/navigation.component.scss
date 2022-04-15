@@ -1,16 +1,32 @@
-@import '../../styles/var';
-
-.cstm-navbar-toggler-style {
-    border-radius: 50%;
-    padding: .5rem;
+@import "../../styles/var";
+.menu {
+	position: absolute;
+	left: 0%;
+	right: 100%;
+	top: 0%;
+	bottom: 0%;
+	transition: right 0.5s;
+	background-color: blue;
 }
 
-//--------------------------------- TOGGLER  
+.toggle-menu {
+	right: 70%;
+	transition: right 0.5s;
+}
+
+.cstm-navbar-toggler {
+	border-radius: 50%;
+	padding: 0.5rem;
+
+	top: 3%;
+}
+
+//--------------------------------- TOGGLER
 
 .demo {
 	display: flex;
 	align-items: center;
-	justify-content: center; 
+	justify-content: center;
 	// 	for demo
 	.menu-icon {
 		transform: scale(1.5);
@@ -66,7 +82,6 @@
 	}
 	&.active,
 	.menu-icon__cheeckbox:checked + div {
-
 		height: 12px;
 		span {
 			&:first-of-type {
@@ -100,19 +115,4 @@
 		}
 	}
 }
-//--------------------------------- TOGGLER END 
-
-////------------------------------- placeholder
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $clr-menu-search-placeholder;
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $clr-menu-search-placeholder;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: $clr-menu-search-placeholder;
-  }
-////-------------------------------   placeholder end
+//--------------------------------- TOGGLER END
