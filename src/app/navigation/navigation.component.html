@@ -4,9 +4,25 @@
 </div>
 <div class="menu" [ngClass]="{'toggle-menu':toggleMenu}">
 
-  <ul class="h-100 mt-5 menu-items dir-rtl">
-    <li class="menu-item"><a class="text-dark" href="">خانه</a></li>
-    <li class="menu-item"><a class="text-dark" href="">روزنامه دیواری</a></li>
-    <li class="menu-item"><a class="text-dark" href="">دل نامه ها</a></li>
+  <ul class="h-100 menu-items dir-rtl d-flex flex-column  align-items-center">
+    <li class="menu-item home-link">
+      <a class="text-dark" href="">
+        <img src="../../assets/images/home.jpg" alt="">
+        <span>خانه</span>
+      </a>
+    </li>
+
+    <li class="menu-item paperwall-link">
+      <a class="text-dark" href="">
+        <img src="../../assets/images/paperwall.jpg" alt="">
+        <span>روزنامه دیواری</span>
+      </a>
+    </li>
+    <li class="menu-item poets-link">
+      <a class="text-dark" href="">
+        <img src="../../assets/images/poets.jpg"  alt="">
+        <span>دل نامه ها</span>
+      </a>
+    </li>
   </ul>
 </div>

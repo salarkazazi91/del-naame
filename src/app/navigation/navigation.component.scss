@@ -1,8 +1,9 @@
 @import "../../styles/var";
 .menu {
+	direction: ltr;
 	position: absolute;
 	right: 100%;
-	left:-200%;
+	left: -100%;
 	top: 0%;
 	bottom: 0%;
 	transition: right 0.5s, left 0.5s;
@@ -10,7 +11,7 @@
 }
 
 .toggle-menu {
-	right: 60%;
+	right: 60%;	
 	left: 0;
 
 	transition: right 0.5s, left 0.5s;
@@ -42,7 +43,17 @@
 	}
 }
 
-.opened-menu{
+.opened-menu {
 	border: 1px solid black;
 }
 
+.menu-item{
+	overflow: hidden;
+	width: 90%;
+	height: 30%; 
+	margin: auto;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+ 
+}

@@ -7,10 +7,23 @@
 // END FONTS
 
 // STYLE
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
 body {
     background-color: $clr-background;
-
+    overflow-x: hidden;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
     font-family: BZiba, FarNazanin, Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
 }
 
 li {
@@ -20,4 +33,9 @@ li {
 a {
     font-size: clamp(1.5rem, 5vw, 3rem) !important;
     text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
 }
