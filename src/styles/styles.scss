@@ -40,3 +40,19 @@ img{
     width: 100%;
     height: auto;
 }
+
+
+.bg-no-repeat{
+    background-repeat: no-repeat;
+}
+
+.bg-contain{
+    background-size: contain;
+}
+.bg-cover{
+    background-size: cover;
+}
+
+.bg-center{ 
+    background-position: center;
+}
