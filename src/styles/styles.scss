@@ -20,6 +20,7 @@ body {
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
     font-family: BZiba, FarNazanin, Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem,5vw,2rem);
 }
 
 body::-webkit-scrollbar {

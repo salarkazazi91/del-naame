@@ -1,41 +1,117 @@
 :host {
     display: block;
-    height: 100vh;
+    height : 100vh;
+
     .main {
-        height: 100%;
+        height : 100%;
         display: grid;
-        
-        grid-template-rows: repeat(4,minmax(40px,auto));
+
+        grid-template-rows   : repeat(4, minmax(40px, auto));
         grid-template-columns: repeat(3, 1fr);
 
         grid-template-areas:
+            "header header header"
             "title pic2 logo"
             "title pic2 logo"
-            "pic1 pic2 header"
+            "pic1 pic2 heading"
             "pic1 pic2 content"
-            "pic1 pic2 content";
+            "pic1 pic2 content"
+            "footer footer footer"
+        ;
     }
 }
 
 .title {
     grid-area: title;
 }
+.animating{
+    z-index: -1;
+}
 .pic1 {
-    grid-area: pic1;
+    grid-area       : pic1;
+    background-image: url(../../assets/images/home2.jpg);
+
 }
+
 .pic2 {
-    grid-area: pic2;
+    grid-area       : pic2;
+    background-image: url(../../assets/images/home2.jpg);
 }
+
 .logo {
     grid-area: logo;
 }
-.header {
-    grid-area: header;
+
+.heading {
+    grid-area: heading;
 }
+
 .content {
     grid-area: content;
 }
 
 div {
     border: 1px solid yellow;
+}
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+@media screen and (min-width:726px) {
+    .pic1 {
+        animation: pic1_anime 30s infinite;
+    }
+
+    .pic2 {
+        animation: pic2_anime 50s infinite;
+    }
+}
+
+@keyframes pic1_anime {
+    0% {
+        transform: translate(0, 0px)
+    }
+
+    25% {
+        transform: translate(5px, 15px)
+    }
+
+    50% {
+        transform: translate(-10px, -30px)
+    }
+
+    75% {
+        transform: translate(5px, 15px)
+    }
+
+    100% {
+        transform: translate(0, 0px)
+    }
+}
+
+@keyframes pic2_anime {
+    0% {
+        transform: translate(0, 0px)
+    }
+
+    25% {
+        transform: translate(-10px, -30px)
+    }
+
+    50% {
+        transform: translate(5px, 15px)
+    }
+
+    75% {
+        transform: translate(5px, 15px)
+    }
+
+    100% {
+        transform: translate(0, 0px)
+    }
 }
