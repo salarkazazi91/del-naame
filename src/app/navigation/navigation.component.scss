@@ -1,44 +1,46 @@
 @import "../../styles/var";
 
 .menu {
-	direction       : ltr;
-	position        : absolute;
-	top             : 0%;
-	bottom          : 0%;
-	transition      : width 0.5s, left 0.5s;
-	background-color: white;
-	width           : 0;
-	
+	direction: ltr;
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	transition: width 0.5s, left 0.5s;
+	width: 0;
+	background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%),
+		linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%),
+		linear-gradient(-45deg, transparent 75%, black 80%, transparent 0), radial-gradient(gray 2px, transparent 0);
+	background-size: 30px 30px, 30px 30px;
 }
 
 .toggle-menu {
-	left      : 0;
-	width     : 100%;
+	left: 0;
+	width: 100%;
 	transition: width 0.5s, left 0.5s;
 }
 
 .menu-btn {
-	border       : 1px solid white;
+	border: 1px solid white;
 	border-radius: 50%;
-	width        : 50px;
-	height       : 50px;
+	width: 50px;
+	height: 50px;
 
-	display        : flex;
-	flex-flow      : column nowrap;
+	display: flex;
+	flex-flow: column nowrap;
 	justify-content: space-evenly;
-	padding        : 0.5rem;
-	cursor         : pointer;
+	padding: 0.5rem;
+	cursor: pointer;
 
 	position: absolute;
-	top     : 2%;
-	left    : 2%;
+	top: 2%;
+	left: 2%;
 
 	z-index: 10000;
 
 	.line {
-		width           : 80%;
-		margin          : auto;
-		height          : 1px;
+		width: 80%;
+		margin: auto;
+		height: 1px;
 		background-color: white;
 	}
 }
@@ -60,45 +62,45 @@
 }
 
 .menu-item {
-	overflow           : hidden;
-	width              : 90%;
-	height             : 30%;
-	margin             : auto;
-	border-radius      : 5px;
+	overflow: hidden;
+	width: 90%;
+	height: 30%;
+	margin: auto;
+	border-radius: 50%;
 	background-position: center;
-	background-size    : cover;
-	background-repeat  : no-repeat;
-	transition         : transform 0.5s;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: transform 0.5s;
 
 	a {
 		transition: color 0.5s;
 	}
 
 	&::after {
-		content         : "";
-		position        : absolute;
-		top             : 0%;
-		bottom          : 0%;
-		right           : 0%;
-		left            : 0%;
+		content: "";
+		position: absolute;
+		top: 0%;
+		bottom: 0%;
+		right: 0%;
+		left: 0%;
 		background-color: rgba($color: #000000, $alpha: 0.5);
-		transition      : background-color 0.5s;
-		z-index         : 10001;
+		transition: background-color 0.5s;
+		z-index: 10001;
 	}
 
 	&:hover {
-		transform : scale(105%);
+		transform: scale(105%);
 		transition: transform 0.5s;
 
 		a {
-			color     : #c5a379 !important;
+			color: #c5a379 !important;
 			transition: color 0.5s;
 		}
 	}
 
 	&:hover::after {
 		background-color: rgba($color: #000000, $alpha: 0);
-		transition      : background-color 0.5s;
+		transition: background-color 0.5s;
 	}
 }
 
@@ -106,10 +108,10 @@
 	position: relative;
 
 	a {
-		position : absolute;
-		top      : 50%;
-		left     : 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
 		transform: translate(-50%, -50%);
-		z-index  : 10002;
+		z-index: 10002;
 	}
 }
