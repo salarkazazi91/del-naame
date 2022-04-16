@@ -11,7 +11,7 @@
 }
 
 .toggle-menu {
-	right: 60%;	
+	right: 60%;
 	left: 0;
 
 	transition: right 0.5s, left 0.5s;
@@ -20,8 +20,8 @@
 .menu-btn {
 	border: 1px solid white;
 	border-radius: 50%;
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 
 	display: flex;
 	flex-flow: column nowrap;
@@ -30,8 +30,8 @@
 	cursor: pointer;
 
 	position: absolute;
-	top: 3%;
-	left: 3%;
+	top: 2%;
+	left: 2%;
 
 	z-index: 10000;
 
@@ -47,13 +47,64 @@
 	border: 1px solid black;
 }
 
-.menu-item{
+.home-link {
+	background-image: url(../../assets/images/home.jpg);
+}
+.paperwall-link {
+	background-image: url(../../assets/images/paperwall.jpg);
+}
+.poets-link {
+	background-image: url(../../assets/images/poets.jpg);
+}
+
+.menu-item {
 	overflow: hidden;
 	width: 90%;
-	height: 30%; 
+	height: 30%;
 	margin: auto;
+	border-radius: 5px;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
- 
+	transition: transform 0.5s;
+	a {
+		transition: color 0.5s;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0%;
+		bottom: 0%;
+		right: 0%;
+		left: 0%;
+		background-color: rgba($color: #000000, $alpha: 0.5);
+		transition: background-color 0.5s;
+		z-index: 10001;
+	}
+
+	&:hover {
+		transform: scale(105%);
+		transition: transform 0.5s;
+		a {
+			color: #c5a379 !important;
+			transition: color 0.5s;
+		}
+	}
+
+	&:hover::after {
+		background-color: rgba($color: #000000, $alpha: 0);
+		transition: background-color 0.5s;
+	}
+}
+.menu-link {
+	position: relative;
+
+	a {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10002;
+	}
 }
