@@ -12,12 +12,14 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { PaperwallComponent } from './paperwall/paperwall.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    PaperwallComponent
   ],
   imports: [
     NgbModule,
