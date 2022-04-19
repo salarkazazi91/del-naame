@@ -1,42 +1,45 @@
 @import "../../styles/var";
 
 :host {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    min-height: fit-content;
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    min-height      : fit-content;
     background-color: #efe4dc;
-    padding: 2rem 1rem;
-    text-align: center;
+    padding         : 2rem 1rem;
+    text-align      : center;
 }
+
 img {
     width: 25%;
 }
 
 section {
-    margin: 1rem;
+    margin : 1rem;
     padding: 0.5rem 0.15rem;
+
     &.heading {
         .logo-title {
             .logo {
-                width: 60px;
+                width : 60px;
                 height: 60px;
             }
         }
+
         .icon {
-            background: url(../../assets/images/icon.jpg) no-repeat;
+            background         : url(../../assets/images/icon.jpg) no-repeat;
             background-position: center;
-            background-size: contain;
-            width: 4rem;
-            height: 4rem;
+            background-size    : contain;
+            width              : 4rem;
+            height             : 4rem;
         }
     }
 
     &.high-light {
-        padding-left: 0%;
-        padding-right: 0%;
+        padding-left    : 0%;
+        padding-right   : 0%;
         background-color: $clr-paperwall-highligh;
     }
 
@@ -46,11 +49,55 @@ section {
 
     .poem {
         padding: 0%;
+
         .poem-line {
             padding: 1rem;
 
-            display: flex;
+            display        : flex;
             justify-content: space-between;
         }
     }
+}
+
+@media screen and (min-width:512px) {
+    section{
+        font-size: 1rem;
+        border: 1px solid red;
+        img{
+            width : 60px;
+            height : 60px;
+        }
+    }
+    :host {
+        display              : grid;
+        grid-template-columns: 2fr 2fr 3fr;
+        grid-template        :
+            " heading  heading  heading "
+            "icon  logo-title logo-title"
+            "high-light main info"
+            "high-light main info"
+            "footing footing footing"
+        ;
+    }
+    .heading{
+        grid-area: heading;
+    }
+    .icon{
+        grid-area: icon;
+    }
+    .logo-title{
+        grid-area: logo-title;
+    }
+    .high-light{
+        grid-area: high-light;
+    }
+    .main{
+        grid-area: main;
+    }
+    .info{
+        grid-area: info;
+    }
+    .footing{
+        grid-area: footing;
+    } 
 }
